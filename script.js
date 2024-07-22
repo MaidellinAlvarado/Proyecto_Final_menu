@@ -1,6 +1,6 @@
 
 
-    // Datos simulados de tareas para cada sección
+
 const tasks = {
     codigo: [
         'To do List : https://github.com/MaidellinAlvarado/TodoList.git',
@@ -21,7 +21,6 @@ const tasks = {
     ]
 };
 
-// Función para renderizar las tareas en la lista
 function renderTasks(sectionId, tasksArray) {
     const ul = document.getElementById(sectionId);
     ul.innerHTML = '';
@@ -35,16 +34,15 @@ function renderTasks(sectionId, tasksArray) {
 
         link.textContent = title.trim();
         link.href = url.trim();
-        link.target = '_blank'; // Abrir enlace en una nueva pestaña
-
+        link.target = '_blank'; 
         li.appendChild(link);
         ul.appendChild(li);
     });
 
-    ul.style.display = 'block'; // Mostrar la lista después de renderizar
+    ul.style.display = 'block'; 
 }
 
-// Event listeners para los botones
+
 document.addEventListener('DOMContentLoaded', function() {
     const btnCodigo = document.getElementById('btnCodigo');
     const btnPdf = document.getElementById('btnPdf');
